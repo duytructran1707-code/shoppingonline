@@ -18,8 +18,8 @@ app.use('/api/customer', require('./api/customer.js'));
 
 // deployment
 app.use('/admin', express.static(path.resolve(__dirname, '../client-admin/build')));
-app.get('/admin/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client-admin/build', 'index.html'))
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 app.use('/', express.static(path.resolve(__dirname, '../client-customer/build')));
 app.get('*', (req, res) => {
