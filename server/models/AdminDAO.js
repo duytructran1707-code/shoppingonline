@@ -1,5 +1,5 @@
 require('../utils/MongooseUtil');
-const Models = require('./Models');
+const Models = require('./models');
 
 const AdminDAO = {
   async selectByUsernameAndPassword(username, password) {
