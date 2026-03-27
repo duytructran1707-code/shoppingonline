@@ -1,5 +1,5 @@
 require('../utils/MongooseUtil');
-const Models = require('./models');
+const Models = require('./Models');
 
 const CustomerDAO = {
   async selectByUsernameOrEmail(username, email) {
